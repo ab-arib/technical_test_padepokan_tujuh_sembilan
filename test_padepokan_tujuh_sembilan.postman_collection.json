@@ -1,0 +1,583 @@
+{
+	"info": {
+		"_postman_id": "441666ba-f2e0-486d-893b-d4188198864d",
+		"name": "test_padepokan_tujuh_sembilan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add nasabah",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Nasabah02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/nasabah",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"nasabah"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS - Add nasabah",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Nasabah01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/nasabah",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"nasabah"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"54-ZYGKq0N+1nGCf1SoACHfgIQT4TE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 14:48:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Add new nasabah, success\",\n    \"data\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all nasabah",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/nasabah",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"nasabah"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS - Get all nasabah",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/nasabah",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"nasabah"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"135-S8miyj03hp/P5aXM4ygN52NRh18\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:23:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Get all nasabah, success\",\n    \"data\": [\n        {\n            \"AccountId\": 1,\n            \"Name\": \"Nasabah01\",\n            \"createdAt\": \"2022-05-15T11:48:51.294Z\",\n            \"updatedAt\": \"2022-05-15T11:48:51.294Z\"\n        },\n        {\n            \"AccountId\": 2,\n            \"Name\": \"Nasabah02\",\n            \"createdAt\": \"2022-05-15T11:48:51.294Z\",\n            \"updatedAt\": \"2022-05-15T11:48:51.294Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add transaksi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"AccountId\": 1,\r\n    \"TransactionDate\": \"2022-03-28\",\r\n    \"Description\": \"Setor Tunai\",\r\n    \"DebitCreditStatus\": \"D\",\r\n    \"Amount\": 500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/transaksi",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transaksi"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS - Add transaksi",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AccountId\": 1,\r\n    \"TransactionDate\": \"2022-01-13\",\r\n    \"Description\": \"Bayar Listrik\",\r\n    \"DebitCreditStatus\": \"C\",\r\n    \"Amount\": 111000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/transaksi",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaksi"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-XoE9uLBbx7TQaNQXzcaar+Iw1Ws\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 16:39:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Add new transaksi, success\",\n    \"data\": {\n        \"transaksi_poin\": 36\n    }\n}"
+				},
+				{
+					"name": "FAILED - Add transaksi not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AccountId\": 10000,\r\n    \"TransactionDate\": \"2022-01-13\",\r\n    \"Description\": \"Bayar Listrik\",\r\n    \"DebitCreditStatus\": \"C\",\r\n    \"Amount\": 111000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/transaksi",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaksi"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5b-hZnlv1Os4HcdkP6rTCseWP9q2JE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 16:51:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"failed\",\n    \"statusCode\": 404,\n    \"message\": \"Nasabah by id = 10000, not found\",\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all nasabah point",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/point",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"point"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS - Get all nasabah point",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/point",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"point"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-COhnNXxUwTJq8vlGSGJbRs8cS0g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:24:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Get all nasabah point, success\",\n    \"data\": [\n        {\n            \"AccountId\": 1,\n            \"Name\": \"Nasabah01\",\n            \"TotalPoint\": 112\n        },\n        {\n            \"AccountId\": 2,\n            \"Name\": \"Nasabah02\",\n            \"TotalPoint\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get transaksi report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"AccountId\": 1,\r\n    \"StartDate\": \"2022-01-01\",\r\n    \"EndDate\": \"2022-02-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/transaksi/report",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transaksi",
+						"report"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS - Get transaksi report",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AccountId\": 1,\r\n    \"StartDate\": \"2022-01-01\",\r\n    \"EndDate\": \"2023-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/transaksi/report",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaksi",
+								"report"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1037"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"40d-4WeUQU7hKucfaHIrX8u+Ka4SulM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:04:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"statusCode\": 200,\n    \"message\": \"Get transaksi report, success\",\n    \"data\": [\n        {\n            \"TransactionDate\": \"2022-01-01T00:00:00.000Z\",\n            \"Description\": \"Bayar Listrik\",\n            \"Credit\": 111000,\n            \"Debit\": \"-\",\n            \"Amount\": 111000\n        },\n        {\n            \"TransactionDate\": \"2022-01-13T00:00:00.000Z\",\n            \"Description\": \"Beli Pulsa\",\n            \"Credit\": 57000,\n            \"Debit\": \"-\",\n            \"Amount\": 57000\n        },\n        {\n            \"TransactionDate\": \"2022-01-28T00:00:00.000Z\",\n            \"Description\": \"Setor Tunai\",\n            \"Credit\": \"-\",\n            \"Debit\": 550000,\n            \"Amount\": 550000\n        },\n        {\n            \"TransactionDate\": \"2022-02-01T00:00:00.000Z\",\n            \"Description\": \"Bayar Listrik\",\n            \"Credit\": 104000,\n            \"Debit\": \"-\",\n            \"Amount\": 104000\n        },\n        {\n            \"TransactionDate\": \"2022-02-05T00:00:00.000Z\",\n            \"Description\": \"Beli Pulsa\",\n            \"Credit\": 78000,\n            \"Debit\": \"-\",\n            \"Amount\": 78000\n        },\n        {\n            \"TransactionDate\": \"2022-02-20T00:00:00.000Z\",\n            \"Description\": \"Beli Pulsa\",\n            \"Credit\": 62000,\n            \"Debit\": \"-\",\n            \"Amount\": 62000\n        },\n        {\n            \"TransactionDate\": \"2022-03-01T00:00:00.000Z\",\n            \"Description\": \"Bayar Listrik\",\n            \"Credit\": 141000,\n            \"Debit\": \"-\",\n            \"Amount\": 141000\n        },\n        {\n            \"TransactionDate\": \"2022-03-28T00:00:00.000Z\",\n            \"Description\": \"Setor Tunai\",\n            \"Credit\": \"-\",\n            \"Debit\": 500000,\n            \"Amount\": 500000\n        }\n    ]\n}"
+				},
+				{
+					"name": "FAILED - Get transaksi report not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AccountId\": 1000,\r\n    \"StartDate\": \"2022-01-01\",\r\n    \"EndDate\": \"2022-02-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/transaksi/report",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"transaksi",
+								"report"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ed-qtA5vpJOt1prNUKiW95+882Nhis\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:05:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"failed\",\n    \"statusCode\": 404,\n    \"message\": \"Report transaksi for nasabah id = 1000 between Sat Jan 01 2022 07:00:00 GMT+0700 (Western Indonesia Time) to Sun Feb 20 2022 07:00:00 GMT+0700 (Western Indonesia Time), not found\",\n    \"data\": []\n}"
+				}
+			]
+		}
+	]
+}
